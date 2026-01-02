@@ -647,107 +647,127 @@
             background: var(--pure-white);
         }
 
-        /* Testimonials Carousel */
-        .testimonials-carousel {
-            max-width: 1000px;
-            margin: 4rem auto 0;
-            position: relative;
-            overflow: hidden;
-        }
+        /* Testimonials Carousel - FIXED */
+.testimonials-carousel {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    position: relative;
+    overflow: hidden;
+}
 
-        .testimonial-slider {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            gap: 2rem;
-            padding: 1rem;
-        }
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
 
-        .testimonial-card {
-            background: var(--pure-white);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            text-align: center;
-            min-width: 300px;
-            flex: 0 0 auto;
-            border: 1px solid #e2e8f0;
-        }
+.testimonial-card {
+    background: var(--pure-white);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 300px;
+    flex: 0 0 calc(33.333% - 1.33rem); /* Show 3 cards at once */
+    border: 1px solid #e2e8f0;
+}
 
-        .testimonial-text {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            position: relative;
-            min-height: 120px;
-        }
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    position: relative;
+    min-height: 120px;
+}
 
-        .testimonial-text:before, .testimonial-text:after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--primary-blue);
-            opacity: 0.2;
-            position: absolute;
-        }
+.testimonial-text:before, .testimonial-text:after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary-blue);
+    opacity: 0.2;
+    position: absolute;
+}
 
-        .testimonial-text:before {
-            top: -15px;
-            left: -5px;
-        }
+.testimonial-text:before {
+    top: -15px;
+    left: -5px;
+}
 
-        .testimonial-text:after {
-            bottom: -25px;
-            right: -5px;
-        }
+.testimonial-text:after {
+    bottom: -25px;
+    right: -5px;
+}
 
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
 
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            color: var(--pure-white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: var(--pure-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
-        .carousel-controls {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
 
-        .carousel-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: var(--light-blue);
-            border: none;
-            color: var(--primary-blue);
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+.carousel-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--light-blue);
+    border: none;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        .carousel-btn:hover {
-            background: var(--primary-blue);
-            color: var(--pure-white);
-            transform: scale(1.1);
-        }
+.carousel-btn:hover {
+    background: var(--primary-blue);
+    color: var(--pure-white);
+    transform: scale(1.1);
+}
 
+/* Responsive carousel */
+@media (max-width: 992px) {
+    .testimonial-card {
+        flex: 0 0 calc(50% - 1rem); /* Show 2 cards on tablets */
+        min-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        flex: 0 0 calc(100% - 0rem); /* Show 1 card on mobile */
+        min-width: 250px;
+        padding: 2rem;
+    }
+    
+    .testimonial-slider {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
         /* Contact Section */
         .contact-grid {
             display: grid;
@@ -1456,7 +1476,7 @@
                     <img src="./img/03.png" alt="Obaida Ashfaque - Owner of BLUVERA">
                 </div>
                 <div class="owner-info">
-                    <h2>About Us</h2>
+                    <h2>About us</h2>
                     <h3>Obaida Ashfaque</h3>
                     <p>With over the years of experience in the water purification industry, Obaida Ashfaque founded BLUVERA with a vision to provide the purest drinking water to every household and business in Banaras and beyond.</p>
                     <p>His commitment to quality and customer satisfaction has made BLUVERA one of the most trusted names in packaged drinking water. Under his leadership, the company has grown from a small startup to serving thousands of customers across the region.</p>
@@ -1495,7 +1515,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#owner">About Us</a></li>
+                        <li><a href="#owner">About us</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#booking">Booking</a></li>
                         <li><a href="#contact">Contact</a></li>
@@ -1568,40 +1588,64 @@
             }
         });
         
-        // Testimonial Carousel
-        const testimonialSlider = document.getElementById('testimonialSlider');
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        let currentSlide = 0;
-        const slideWidth = 320; // Width of each testimonial card + gap
-        const totalSlides = 8; // Total number of testimonials
-        
-        function updateSlider() {
-            const maxSlide = Math.max(0, totalSlides - 3); // Show 3 cards at a time
-            if (currentSlide > maxSlide) currentSlide = maxSlide;
-            if (currentSlide < 0) currentSlide = 0;
-            
-            testimonialSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+        // Testimonial Carousel - FIXED
+    const testimonialSlider = document.getElementById('testimonialSlider');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+    const totalSlides = 8;
+    let cardsPerView = 3; // Default for desktop
+    
+    function updateCardsPerView() {
+        if (window.innerWidth < 768) {
+            cardsPerView = 1;
+        } else if (window.innerWidth < 992) {
+            cardsPerView = 2;
+        } else {
+            cardsPerView = 3;
         }
+    }
+    
+    function updateSlider() {
+        const slideWidth = 100 / cardsPerView; // Percentage per slide
+        const maxSlide = Math.max(0, totalSlides - cardsPerView);
         
-        nextBtn.addEventListener('click', () => {
-            currentSlide++;
-            updateSlider();
-        });
+        if (currentSlide > maxSlide) currentSlide = maxSlide;
+        if (currentSlide < 0) currentSlide = 0;
         
-        prevBtn.addEventListener('click', () => {
-            currentSlide--;
-            updateSlider();
-        });
-        
-        // Auto-slide testimonials
-        setInterval(() => {
-            currentSlide++;
-            if (currentSlide > totalSlides - 3) {
-                currentSlide = 0;
-            }
-            updateSlider();
-        }, 5000);
+        testimonialSlider.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+    }
+    
+    nextBtn.addEventListener('click', () => {
+        updateCardsPerView();
+        currentSlide++;
+        updateSlider();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        updateCardsPerView();
+        currentSlide--;
+        updateSlider();
+    });
+    
+    // Auto-slide testimonials
+    setInterval(() => {
+        updateCardsPerView();
+        currentSlide++;
+        const maxSlide = Math.max(0, totalSlides - cardsPerView);
+        if (currentSlide > maxSlide) {
+            currentSlide = 0;
+        }
+        updateSlider();
+    }, 5000);
+    
+    // Update on window resize
+    window.addEventListener('resize', () => {
+        updateCardsPerView();
+        currentSlide = 0; // Reset to first slide on resize
+        updateSlider();
+    });
+
         
         // Form submission
         document.getElementById('orderForm').addEventListener('submit', (e) => {
@@ -1680,6 +1724,9 @@
                 }
             });
         });
+            // Initialize
+    updateCardsPerView();
+    updateSlider();
     </script>
 </body>
 </html>
